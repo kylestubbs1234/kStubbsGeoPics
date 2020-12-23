@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/StartFragment">
+
+    <fragment
+        android:id="@+id/StartFragment"
+        android:name="edu.ucsb.cs.cs184.kstubbsgeopics.start.StartFragment"
+        android:label="Start Fragment"
+        tools:layout="@layout/fragment_start">
+
+        <action
+            android:id="@+id/action_StartFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+        <action
+            android:id="@+id/action_StartFragment_to_RegisterFragment"
+            app:destination="@id/RegisterFragment" />
+        <action
+            android:id="@+id/action_StartFragment_to_MapsFragment"
+            app:destination="@id/MapsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="edu.ucsb.cs.cs184.kstubbsgeopics.login.LoginFragment"
+        android:label="Login Fragment"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_LoginFragment_to_MapsFragment"
+            app:destination="@id/MapsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/RegisterFragment"
+        android:name="edu.ucsb.cs.cs184.kstubbsgeopics.register.RegisterFragment"
+        android:label="Register Fragment"
+        tools:layout="@layout/fragment_register">
+
+        <action
+            android:id="@+id/action_RegisterFragment_to_MapsFragment"
+            app:destination="@id/MapsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/MapsFragment"
+        android:name="edu.ucsb.cs.cs184.kstubbsgeopics.maps.MapsFragment"
+        android:label="Maps Fragment"
+        tools:layout="@layout/fragment_maps">
+
+        <action
+            android:id="@+id/action_MapsFragment_to_StartFragment"
+            app:destination="@id/StartFragment" />
+        <action
+            android:id="@+id/action_MapsFragment_to_PostFragment"
+            app:destination="@id/PostFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/PostFragment"
+        android:name="edu.ucsb.cs.cs184.kstubbsgeopics.post.PostFragment"
+        android:label="Post Fragment"
+        tools:layout="@layout/fragment_post">
+
+        <action
+            android:id="@+id/action_PostFragment_to_MapsFragment"
+            app:destination="@id/MapsFragment" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_size_username">24sp</dimen>
+    <dimen name="small_box_side">50dp</dimen>
+    <dimen name="side_length_zero">00dp</dimen>
+    <dimen name="margin_post">8dp</dimen>
+    <dimen name="text_size_normal">18sp</dimen>
+    <dimen name="height_lat_long">30dp</dimen>
+</resources>

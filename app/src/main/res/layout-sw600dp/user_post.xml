@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_post"
+    android:layout_marginBottom="500dp">
+<!--test differnt bottom margin sizes-->
+
+    <TextView
+        android:id="@+id/username_box"
+        android:layout_width="@dimen/side_length_zero"
+        android:layout_height="@dimen/small_box_side"
+        android:gravity="center_vertical"
+        android:text="@string/username"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_username"
+        app:layout_constraintBottom_toTopOf="@id/image_box"
+        app:layout_constraintEnd_toStartOf="@id/display_likes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/image_box"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/display_likes"
+        android:layout_width="@dimen/small_box_side"
+        android:layout_height="@dimen/small_box_side"
+        android:gravity="center"
+        android:text="0"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintBottom_toTopOf="@id/image_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/caption_box"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toTopOf="@id/caption_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/username_box" />
+
+    <TextView
+        android:id="@+id/caption_box"
+        android:layout_width="@dimen/side_length_zero"
+        android:layout_height="@dimen/small_box_side"
+        android:gravity="center_vertical"
+        android:text="@string/caption"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintBottom_toTopOf="@id/latitude_box"
+        app:layout_constraintEnd_toStartOf="@id/like_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_box" />
+
+    <ImageView
+        android:id="@+id/like_button"
+        android:layout_width="@dimen/small_box_side"
+        android:layout_height="@dimen/side_length_zero"
+        android:background="@drawable/ic_like_hollow"
+        app:layout_constraintBottom_toTopOf="@id/longitude_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/caption_box"
+        app:layout_constraintTop_toBottomOf="@id/image_box" />
+
+    <TextView
+        android:id="@+id/latitude_box"
+        android:layout_width="@dimen/side_length_zero"
+        android:layout_height="@dimen/small_box_side"
+        android:gravity="center_vertical"
+        android:text="@string/latitude"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintBottom_toTopOf="@id/distance_box"
+        app:layout_constraintEnd_toStartOf="@id/longitude_box"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/caption_box" />
+
+    <TextView
+        android:id="@+id/longitude_box"
+        android:layout_width="@dimen/side_length_zero"
+        android:layout_height="@dimen/small_box_side"
+        android:gravity="center_vertical"
+        android:text="@string/longitude"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintBottom_toTopOf="@id/distance_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/latitude_box"
+        app:layout_constraintTop_toBottomOf="@id/caption_box" />
+    
+    <TextView
+        android:id="@+id/distance_box"
+        android:layout_width="@dimen/side_length_zero"
+        android:layout_height="@dimen/small_box_side"
+        android:gravity="center_vertical"
+        android:text="@string/distance_from_center"
+        android:textSize="@dimen/text_size_normal"
+        android:background="@drawable/line_on_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/latitude_box"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
